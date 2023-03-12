@@ -3,7 +3,7 @@ This a proof of concept on-chain leaderboard for Helium mapper devices. It is a 
 
 A working prototype on the Solana devnet is running and the instructions can be invoked from a discord server setup as a demo.
 
-https://discord.gg/xB86xekx
+https://discord.gg/sHNEsxPCPr
 
 
 ![Anchor Program](images/trustedMappers.png)
@@ -18,5 +18,7 @@ This instruction creates a PDA with the mappers Device EUI as part of the seed. 
 The Hexagon accounts are used to record hexagons that have been covered by a mapper. The accounts are created with a parent resolution 5 hexagon and mapper deveui as the seeds. These accounts store resolution 9 hexagons that the mapper has successfully covered as a bitmap. This instruction is automatically called from the Helium console ingestion point.
 
 The Hexagon accounts are also used to keep track of an individual hotspot's coverage. The idea is any interested party can issue the /fund command with a hotspots address which will create the Hexagon PDA. This allows anyone to fund a hotspot to be mapped.
+
+Each resolution 5 hexagon contains 2401 resolution 9 hexagons. Each r9 is stored as a bit in the hexagon accounts. This bitmap can be used to contruct the coverage of the mapper or of the hotspot. 
 
 ![Resolution 9 hexagons](images/r5r9.png)
