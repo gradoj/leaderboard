@@ -3,6 +3,9 @@ This a proof of concept on-chain leaderboard for Helium mapper devices. It is a 
 
 A working prototype on the Solana devnet is running and the instructions can be invoked from a discord server setup as a demo.
 
+https://discord.gg/xB86xekx
+
+
 ![Anchor Program](images/trustedMappers.png)
 
 ## Create User Instruction( /join )
